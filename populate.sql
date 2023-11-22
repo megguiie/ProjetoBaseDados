@@ -267,3 +267,4 @@ INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Johannesbu
 INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Toronto', '06:0', '500 km');
 INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Riyadh', '02:15', '180 km');
 
+--JET
