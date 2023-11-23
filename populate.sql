@@ -1,25 +1,25 @@
 -- 
 
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Aero Spacelines', '337-SG/SGT', '499', 'Grande', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Airbus', 'A380', '43', 'Pequeno', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Boeing', 'B-29', '444', 'Grande', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Caproni', 'Ca.60', '335', 'Grande', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Douglas', 'XB-10', '189', 'Medio', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Bristol', 'Brabazon', '369', 'Grande', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Convair', 'XC-99', '162', 'Pequeno', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Lockheed', 'R6V', '56', 'Pequeno', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('McDonell Douglas', 'KC-10', '481', 'Grande', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Northrop Grumman', 'B-2 Spirint', '87', 'Pequeno', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Tupolev', 'ANT-20', '181', 'Medio', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Junkers', 'G.38', '492', 'Grande', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Junkers', 'Ju 390', '369', 'Grande', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Saumders-Roe Princess', '96-JUD', '323', 'Medio', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Zeppelin-Staaken', 'R.VI', '85', 'Pequeno', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Hughes Hercules', 'H-4', '221', 'Pequeno', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Antonov', 'An-22', '443', 'Grande', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Beriev', 'Be-2500', '144', 'Pequeno', 'n');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Blohm & Voss', 'BV 28', '327', 'Medio', 's');
-insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_modelidade) values('Dornier', 'Do X', '236', 'Medio', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Aero Spacelines', '337-SG/SGT', '499', 'Grande', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Airbus', 'A380', '43', 'Pequeno', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Boeing', 'B-29', '444', 'Grande', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Caproni', 'Ca.60', '335', 'Grande', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Douglas', 'XB-10', '189', 'Medio', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Bristol', 'Brabazon', '369', 'Grande', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Convair', 'XC-99', '162', 'Pequeno', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Lockheed', 'R6V', '56', 'Pequeno', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('McDonell Douglas', 'KC-10', '481', 'Grande', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Northrop Grumman', 'B-2 Spirint', '87', 'Pequeno', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Tupolev', 'ANT-20', '181', 'Medio', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Junkers', 'G.38', '492', 'Grande', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Junkers', 'Ju 390', '369', 'Grande', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Saumders-Roe Princess', '96-JUD', '323', 'Medio', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Zeppelin-Staaken', 'R.VI', '85', 'Pequeno', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Hughes Hercules', 'H-4', '221', 'Pequeno', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Antonov', 'An-22', '443', 'Grande', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Beriev', 'Be-2500', '144', 'Pequeno', 'n');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Blohm & Voss', 'BV 28', '327', 'Medio', 's');
+insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Dornier', 'Do X', '236', 'Medio', 's');
 
 
 
@@ -266,5 +266,3 @@ INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Delhi', '0
 INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Johannesburg', '03:15', '250 km');
 INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Toronto', '06:0', '500 km');
 INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Riyadh', '02:15', '180 km');
-
---JET
