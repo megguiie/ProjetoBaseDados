@@ -243,10 +243,6 @@ insert into localidade (loc_nome, loc_duracao, loc_distancia) values('Johannesbu
 insert into localidade (loc_nome, loc_duracao, loc_distancia) values('Toronto', '06:00', '500 km');
 insert into localidade (loc_nome, loc_duracao, loc_distancia) values('Riyadh', '02:15', '180 km');
 
-select * from bilhetes
-
-delete from bilhetes
-where bi_id = 50
 
 -- Inserção de dados na tabela Bilhetes
 insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, bi_cli_id, bi_ban_id, bi_loc_id) values(1683.89, 'B2', 'LGG4552AZ', '20:48', 'W12', '2024-01-21', 1, 22, 1);
@@ -303,54 +299,49 @@ insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_d
 
 
 -- Inserção de dados na tabela AviaoLoc
-insert into aviaoLoc(loc_id, aviao_id) values(1, 7);
-insert into aviaoLoc(loc_id, aviao_id) values(2, 32);
-insert into aviaoLoc(loc_id, aviao_id) values(3, 18);
-insert into aviaoLoc(loc_id, aviao_id) values(4, 5);
-insert into aviaoLoc(loc_id, aviao_id) values(5, 41);
-insert into aviaoLoc(loc_id, aviao_id) values(6, 23);
-insert into aviaoLoc(loc_id, aviao_id) values(7, 14);
-insert into aviaoLoc(loc_id, aviao_id) values(8, 9);
-insert into aviaoLoc(loc_id, aviao_id) values(9, 35);
-insert into aviaoLoc(loc_id, aviao_id) values(10, 2);
-insert into aviaoLoc(loc_id, aviao_id) values(11, 27);
-insert into aviaoLoc(loc_id, aviao_id) values(12, 10);
-insert into aviaoLoc(loc_id, aviao_id) values(13, 16);
-insert into aviaoLoc(loc_id, aviao_id) values(14, 29);
-insert into aviaoLoc(loc_id, aviao_id) values(15, 8);
-insert into aviaoLoc(loc_id, aviao_id) values(16, 19);
-insert into aviaoLoc(loc_id, aviao_id) values(17, 43);
-insert into aviaoLoc(loc_id, aviao_id) values(18, 26);
-insert into aviaoLoc(loc_id, aviao_id) values(19, 12);
-insert into aviaoLoc(loc_id, aviao_id) values(20, 37);
-insert into aviaoLoc(loc_id, aviao_id) values(21, 4);
-insert into aviaoLoc(loc_id, aviao_id) values(22, 21);
-insert into aviaoLoc(loc_id, aviao_id) values(23, 30);
+insert into aviaoLoc(loc_id, aviao_id) values(1, 5);
+insert into aviaoLoc(loc_id, aviao_id) values(2, 18);
+insert into aviaoLoc(loc_id, aviao_id) values(3, 7);
+insert into aviaoLoc(loc_id, aviao_id) values(4, 16);
+insert into aviaoLoc(loc_id, aviao_id) values(5, 2);
+insert into aviaoLoc(loc_id, aviao_id) values(6, 13);
+insert into aviaoLoc(loc_id, aviao_id) values(7, 8);
+insert into aviaoLoc(loc_id, aviao_id) values(8, 14); 
+insert into aviaoLoc(loc_id, aviao_id) values(9, 20);
+insert into aviaoLoc(loc_id, aviao_id) values(10, 11);
+insert into aviaoLoc(loc_id, aviao_id) values(11, 1);
+insert into aviaoLoc(loc_id, aviao_id) values(12, 19);
+insert into aviaoLoc(loc_id, aviao_id) values(13, 12);
+insert into aviaoLoc(loc_id, aviao_id) values(14, 3);
+insert into aviaoLoc(loc_id, aviao_id) values(15, 17);
+insert into aviaoLoc(loc_id, aviao_id) values(16, 10);
+insert into aviaoLoc(loc_id, aviao_id) values(17, 6);
+insert into aviaoLoc(loc_id, aviao_id) values(18, 15);
+insert into aviaoLoc(loc_id, aviao_id) values(19, 4);
+insert into aviaoLoc(loc_id, aviao_id) values(20, 9);
+insert into aviaoLoc(loc_id, aviao_id) values(21, 20);
+insert into aviaoLoc(loc_id, aviao_id) values(22, 5);
+insert into aviaoLoc(loc_id, aviao_id) values(23, 17);
 insert into aviaoLoc(loc_id, aviao_id) values(24, 1);
-insert into aviaoLoc(loc_id, aviao_id) values(25, 25);
-insert into aviaoLoc(loc_id, aviao_id) values(26, 38);
+insert into aviaoLoc(loc_id, aviao_id) values(25, 10);
+insert into aviaoLoc(loc_id, aviao_id) values(26, 15);
 insert into aviaoLoc(loc_id, aviao_id) values(27, 13);
-insert into aviaoLoc(loc_id, aviao_id) values(28, 22);
-insert into aviaoLoc(loc_id, aviao_id) values(29, 3);
-insert into aviaoLoc(loc_id, aviao_id) values(30, 44);
-insert into aviaoLoc(loc_id, aviao_id) values(31, 20);
-insert into aviaoLoc(loc_id, aviao_id) values(32, 11);
-insert into aviaoLoc(loc_id, aviao_id) values(33, 34);
-insert into aviaoLoc(loc_id, aviao_id) values(34, 6);
-insert into aviaoLoc(loc_id, aviao_id) values(35, 40);
-insert into aviaoLoc(loc_id, aviao_id) values(36, 15);
-insert into aviaoLoc(loc_id, aviao_id) values(37, 28);
-insert into aviaoLoc(loc_id, aviao_id) values(38, 45);
-insert into aviaoLoc(loc_id, aviao_id) values(39, 17);
-insert into aviaoLoc(loc_id, aviao_id) values(40, 31);
-insert into aviaoLoc(loc_id, aviao_id) values(41, 42);
-insert into aviaoLoc(loc_id, aviao_id) values(42, 24);
-insert into aviaoLoc(loc_id, aviao_id) values(43, 36);
-insert into aviaoLoc(loc_id, aviao_id) values(44, 33);
-insert into aviaoLoc(loc_id, aviao_id) values(45, 46);
-insert into aviaoLoc(loc_id, aviao_id) values(46, 39);
-
-
-select * from aviaoloc
-
-delete from aviaoloc
+insert into aviaoLoc(loc_id, aviao_id) values(28, 2);
+insert into aviaoLoc(loc_id, aviao_id) values(29, 7);
+insert into aviaoLoc(loc_id, aviao_id) values(30, 18);
+insert into aviaoLoc(loc_id, aviao_id) values(31, 3);
+insert into aviaoLoc(loc_id, aviao_id) values(32, 14);
+insert into aviaoLoc(loc_id, aviao_id) values(33, 11);
+insert into aviaoLoc(loc_id, aviao_id) values(34, 9);
+insert into aviaoLoc(loc_id, aviao_id) values(35, 6);
+insert into aviaoLoc(loc_id, aviao_id) values(36, 8);
+insert into aviaoLoc(loc_id, aviao_id) values(37, 4);
+insert into aviaoLoc(loc_id, aviao_id) values(38, 19);
+insert into aviaoLoc(loc_id, aviao_id) values(39, 12);
+insert into aviaoLoc(loc_id, aviao_id) values(40, 16);
+insert into aviaoLoc(loc_id, aviao_id) values(41, 1);
+insert into aviaoLoc(loc_id, aviao_id) values(42, 5);
+insert into aviaoLoc(loc_id, aviao_id) values(43, 14);
+insert into aviaoLoc(loc_id, aviao_id) values(44, 10);
+insert into aviaoLoc(loc_id, aviao_id) values(45, 8);
+insert into aviaoLoc(loc_id, aviao_id) values(46, 3);
