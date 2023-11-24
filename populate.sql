@@ -1,5 +1,7 @@
--- 
+-- Inserção de dados nas tabelas antes criadas
 
+
+-- Inserção de dados na tabela Avião
 insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Aero Spacelines', '337-SG/SGT', '499', 'Grande', 's');
 insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Airbus', 'A380', '43', 'Pequeno', 'n');
 insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Boeing', 'B-29', '444', 'Grande', 's');
@@ -22,8 +24,7 @@ insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao
 insert into avioes (aviao_nome, aviao_modelo, aviao_assentos, aviao_porte, aviao_mobilidade) values('Dornier', 'Do X', '236', 'Medio', 's');
 
 
-
-
+-- Inserção de dados na tabela Funcionario
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, ban_id) values('Lara Camelo Cavalheiro', 'Piloto', 'Rua Doutor Alberto Sampaio 23', 192037447, 73301901520, 'AP20066736153902.05', '1981-07-02', 916281041, 9500.00, 38);
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, ban_id) values('Márcio Romeu Gonçalves', 'Carregador', 'Rua Velhas 30', 137666985, 11558338761, 'AP20039164820543.05', '1958-03-11', 962816557, 6123.00, 4);
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, ban_id) values('Soraia Aissatou de Bugalho', 'Segurança', 'Rua Forno 60', 278632122, 11815106672, 'AP20108524301745.05', '1943-12-24', 916319005, 6133.00, 21);
@@ -56,8 +57,7 @@ insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, ban_id) values('Antonella Estrela de Moreira', 'Recepcionista', 'Rua Figueiras 2', 244850143, 29503254224, 'AP20164839164925.05', '1941-11-05', 916383954, 2194.90, 59);
 
 
-
-
+-- Inserção de dados na tabela Clientes
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte, observacoes, ban_id) values('Viviane Mariam de Soares', 125814275, 'vivianesoares@hotmail.com', 926897752, '1992-02-15', 's', 'Rua Pescador Bacalhoeiro 75', 'HR619148', 'Cadeirante', 22);
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte, ban_id) values('Iris Carregueiro', 140053573, 'iriscarregueiro@hotmail.com', 948211469, '1996-06-03', 'n', 'Rua Cardeal Mercier 105', 'WA371814', 76);
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte, ban_id) values('Kiara Raíssa de Machado', 116373156, 'kiararaissa@hotmail.com', 993024502, '2004-10-28', 'n', 'Rua Pé Mouro Armz 94', 'JL298423', 3);
@@ -110,8 +110,7 @@ insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessid
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte, ban_id) values('Rúben Lorenzo Cardoso Rodrigues', 186995040, 'rubenlorenzo@hotmail.com', 910598046, '1990-06-08', 'n', 'Rua Pescador Bacalhoeiro 44', 'KB823870', 57);
 
 
-
-
+-- Inserção de dados na tabela Cartão Bancario
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC) values('Banco Espirito Santo', 'BESCPTPL', 'PT50000730455970830257902', 4315 8185 2946 2373, '9/2027', 165);
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC) values('Banco Santander Totta', 'TOTAPTPL', 'PT50000749417808839317368', 4508 8975 3928 3117, '6/2029', 377);
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC) values('Banco BPI', 'BBPIPTPL', 'PT50000779400308179071649', 4864 5506 6729 3907, '5/2027', 456);
@@ -194,104 +193,152 @@ insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ba
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC) values('Banco Promissor', 'BPROMIPT', 'PT50004156789012345678987', 5421 6754 8901 3425, '3/2025', 689);
 
 
+-- Inserção de dados na tabela Bilhetes
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(1683.89, 'B2', 'LGG4552AZ', '20:48', 'W12', '2024-01-21', 1. 22, 1);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(316.27, 'F6', 'ECZ9279SU', '00:50', 'Y0', '2024-02-27', 2, 76, 2);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(3329.84, 'F6', 'SSH2097YH', '21:36', 'MQ83', '2024-04-04', 3, 3, 3);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(829.64, 'J9', 'KPQ7572PN', '12:51', 'O26', '2024-04-06', 4, 63, 4);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(90.89, 'F6', 'KDY8436SU', '22:21', 'B126', '2024-04-15', 5, 29, 5);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(700.00, 'G7', 'SPJ0740GW', '11:09', 'KN252', '2024-03-28', 6, 55, 6);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(64.83, 'B2', 'LRU8110GY', '06:05', 'M60', '2024-03-24', 7, 41, 7);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(672.71, 'K10', 'VWD3644EZ', '13:25', 'S324', '2024-03-03', 8, 17, 8);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(7826.92, 'H8', 'QOM5704HT', '16:27', 'XH8', '2024-02-15', 9, 50, 9);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(284.90, 'D4', 'MDO4207OZ', '10:23', 'SG9', '2024-04-12', 10, 9, 10);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(2012.99, 'F6', 'LWP6923JG', '04:22', 'E692', '2024-02-08', 11, 68, 11);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(2799.16, 'A1', 'YSR6123UK', '07:41', 'DV140', '2023-12-17', 12, 26, 12);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(1070.72, 'D4', 'PQP2201SK', '12:45', 'M83', '2024-01-31', 13, 7, 13);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(1272.20, 'J9', 'NKW4513GE', '03:20', 'I0', '2023-12-25', 14, 46, 14);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(2140.90, 'A1', 'OMG3215AA', '06:42', 'ME9', '2024-03-27', 15, 31, 15);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(2304.17, 'H8', 'XTN4526ED', '19:33', 'D7', '2024-02-06', 16, 80, 16);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(3975.71, 'B2', 'POA2279BC', '11:24', 'EG3', '2024-02-13', 17, 20, 17);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(292.00, 'C3', 'XTV2076NJ', '10:07', 'A495', '2024-03-24', 18, 44, 18);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(3131.31, 'J9', 'KTV9284TX', '21:58', 'M516', '2023-12-22', 19, 2, 19);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(372.09, 'J9', 'ZDW1155YS', '15:35', 'Q94', '2023-12-02', 20, 71, 20);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(3572.87, 'D4', 'NRP6881RI', '01:09', 'C840', '2023-12-22', 21, 15, 21);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(5522.91, 'B2', 'YXG6131CM', '13:00', 'DG7', '2024-01-25', 22, 65, 22);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(6636.16, 'G7', 'SBL9766VF', '21:46', 'GK61', '2024-03-16', 23, 36, 23);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(2068.52, 'F6', 'FHS8413YT', '20:36', 'G147', '2024-04-26', 24, 52, 24);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(6440.71, 'D4', 'RLA2155YF', '18:40', 'VK53', '2024-02-01', 25, 10, 25);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(3816.16, 'C3', 'FGH3942AZ', '02:46', 'Y029', '2024-04-03', 26, 77, 26);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(3356.72, 'F6', 'DRD2286ZC', '05:47', 'K22', '2024-04-20', 27, 19, 27);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(6651.19, 'J9', 'PZY3805IR', '02:56', 'U23', '2023-12-01', 28, 49, 28);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(6249.26, 'C3', 'OAG3461MI', '15:06', 'I4', '2024-04-10', 29, 13, 29);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(4044.73, 'E5', 'MKI2030YP', '17:45', 'NZ370', '2024-04-26', 30, 62, 30);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(4249.47, 'C3', 'RBI8899FN', '11:12', 'GX07', '2024-03-09', 31, 27, 31);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(1801.15, 'B2', 'IRL8790PD', '23:37', 'OG622', '2023-12-29', 32, 64, 32);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(5381.82, 'C3', 'EIH7388XG', '23:28', 'ZX20', '2024-04-04', 33, 39, 33);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(6290.17, 'A1', 'ZOF0338FA', '10:33', 'ZJ81', '2024-03-12', 34, 73, 34);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(6842.15, 'H8', 'WKH4511UM', '00:33', 'LV00', '2024-01-25', 35, 5, 35);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(2713.01, 'H8', 'GIT7869YE', '16:40', 'KG010', '2024-03-04', 36, 34, 36);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(1660.00, 'K10', 'SRL5127LD', '11:59', 'XT729', '2024-01-26', 37, 23, 37);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(5781.82, 'G7', 'JPF4375ZO', '13:19', 'RZ07', '2023-12-15', 38, 58, 38);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(1025.63, 'E5', 'OFK1029RE', '21:24', 'W59', '2024-01-17', 39, 75, 39);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(448.81, 'K10', 'GMD1696RI', '06:50', 'X300', '2024-04-03', 40, 30, 40);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(805.18, 'F6', 'KHH8901QT', '10:20', 'S26', '2024-04-18', 41, 54, 41);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(480.93, 'K10', 'CGS7488IO', '13:15', 'A5', '2023-12-22', 42, 40, 42);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(562.99, 'E5', 'CPM5463DC', '17:05', 'OJ6', '2024-03-01', 43, 66, 43);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(841.33, 'E5', 'RHM1607ZU', '9:27', 'GR459', '2024-04-03', 44, 33, 44);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(837.66, 'G7', 'SCP3079RY', '11:47', 'T071', '2024-03-21'. 45, 78, 45);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(430.15, 'B2', 'VOO3188AV', '07:27', 'ZC648', '2024-02-10', 46, 47, 46);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(480.17, 'G7', 'HYQ1117VV', '09:34', 'PC2', '2023-12-05', 47, 61, 15);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(715.73, 'K10', 'TJP3491VU', '09:08', 'V4', '2023-12-05', 48, 43, 37);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(606.63, 'G7', 'VQM0130XG', '03:49', 'OO4', '2024-01-24', 49, 72, 29);
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id, loc_id) values(209.91, 'F6', 'HES2112IP', '18:05', 'D45', '2023-12-02', 50, 57, 2);
 
 
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(1683.89, 'B2', 'LGG4552AZ', '20:48', 'W12', '2024-01-21', 1. 22);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(316.27, 'F6', 'ECZ9279SU', '00:50', 'Y0', '2024-02-27', 2, 76);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(3329.84, 'F6', 'SSH2097YH', '21:36', 'MQ83', '2024-04-04', 3, 3);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(829.64, 'J9', 'KPQ7572PN', '12:51', 'O26', '2024-04-06', 4, 63);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(90.89, 'F6', 'KDY8436SU', '22:21', 'B126', '2024-04-15', 5, 29);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(700.00, 'G7', 'SPJ0740GW', '11:09', 'KN252', '2024-03-28', 6, 55);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(64.83, 'B2', 'LRU8110GY', '06:05', 'M60', '2024-03-24', 7, 41;
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(672.71, 'K10', 'VWD3644EZ', '13:25', 'S324', '2024-03-03', 8, 17);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(7826.92, 'H8', 'QOM5704HT', '16:27', 'XH8', '2024-02-15', 9, 50);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(284.90, 'D4', 'MDO4207OZ', '10:23', 'SG9', '2024-04-12', 10, 9);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(2012.99, 'F6', 'LWP6923JG', '04:22', 'E692', '2024-02-08', 11, 68);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(2799.16, 'A1', 'YSR6123UK', '07:41', 'DV140', '2023-12-17', 12, 26);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(1070.72, 'D4', 'PQP2201SK', '12:45', 'M83', '2024-01-31', 13, 7);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(1272.20, 'J9', 'NKW4513GE', '03:20', 'I0', '2023-12-25', 14, 46);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(2140.90, 'A1', 'OMG3215AA', '06:42', 'ME9', '2024-03-27', 15, 31);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(2304.17, 'H8', 'XTN4526ED', '19:33', 'D7', '2024-02-06', 16, 80);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(3975.71, 'B2', 'POA2279BC', '11:24', 'EG3', '2024-02-13', 17, 20);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(292.00, 'C3', 'XTV2076NJ', '10:07', 'A495', '2024-03-24', 18, 44);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(3131.31, 'J9', 'KTV9284TX', '21:58', 'M516', '2023-12-22', 19, 2);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(372.09, 'J9', 'ZDW1155YS', '15:35', 'Q94', '2023-12-02', 20, 71);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(3572.87, 'D4', 'NRP6881RI', '01:09', 'C840', '2023-12-22', 21, 15);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(5522.91, 'B2', 'YXG6131CM', '13:00', 'DG7', '2024-01-25', 22, 65);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(6636.16, 'G7', 'SBL9766VF', '21:46', 'GK61', '2024-03-16', 23, 36);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(2068.52, 'F6', 'FHS8413YT', '20:36', 'G147', '2024-04-26', 24, 52);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(6440.71, 'D4', 'RLA2155YF', '18:40', 'VK53', '2024-02-01', 25, 10);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(3816.16, 'C3', 'FGH3942AZ', '02:46', 'Y029', '2024-04-03', 26, 77);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(3356.72, 'F6', 'DRD2286ZC', '05:47', 'K22', '2024-04-20', 27, 19);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(6651.19, 'J9', 'PZY3805IR', '02:56', 'U23', '2023-12-01', 28, 49);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(6249.26, 'C3', 'OAG3461MI', '15:06', 'I4', '2024-04-10', 29, 13);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(4044.73, 'E5', 'MKI2030YP', '17:45', 'NZ370', '2024-04-26', 30, 62);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(4249.47, 'C3', 'RBI8899FN', '11:12', 'GX07', '2024-03-09', 31, 27);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(1801.15, 'B2', 'IRL8790PD', '23:37', 'OG622', '2023-12-29', 32, 64);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(5381.82, 'C3', 'EIH7388XG', '23:28', 'ZX20', '2024-04-04', 33, 39);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(6290.17, 'A1', 'ZOF0338FA', '10:33', 'ZJ81', '2024-03-12', 34, 73);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(6842.15, 'H8', 'WKH4511UM', '00:33', 'LV00', '2024-01-25', 35, 5);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(2713.01, 'H8', 'GIT7869YE', '16:40', 'KG010', '2024-03-04', 36, 34);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(1660.00, 'K10', 'SRL5127LD', '11:59', 'XT729', '2024-01-26', 37, 23);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(5781.82, 'G7', 'JPF4375ZO', '13:19', 'RZ07', '2023-12-15', 38, 58);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(1025.63, 'E5', 'OFK1029RE', '21:24', 'W59', '2024-01-17', 39, 75);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(448.81, 'K10', 'GMD1696RI', '06:50', 'X300', '2024-04-03', 40, 30);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(805.18, 'F6', 'KHH8901QT', '10:20', 'S26', '2024-04-18', 41, 54);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(480.93, 'K10', 'CGS7488IO', '13:15', 'A5', '2023-12-22', 42, 40);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(562.99, 'E5', 'CPM5463DC', '17:05', 'OJ6', '2024-03-01', 43, 66);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(841.33, 'E5', 'RHM1607ZU', '9:27', 'GR459', '2024-04-03', 44, 33);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(837.66, 'G7', 'SCP3079RY', '11:47', 'T071', '2024-03-21'. 45, 78);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(430.15, 'B2', 'VOO3188AV', '07:27', 'ZC648', '2024-02-10', 46, 47);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(480.17, 'G7', 'HYQ1117VV', '09:34', 'PC2', '2023-12-05', 47, 61);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(715.73, 'K10', 'TJP3491VU', '09:08', 'V4', '2023-12-05', 48, 43);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(606.63, 'G7', 'VQM0130XG', '03:49', 'OO4', '2024-01-24', 49, 72);
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, cli_id, ban_id) values(209.91, 'F6', 'HES2112IP', '18:05', 'D45', '2023-12-02', 50, 57);
+-- Inserção de dados na tabela Localidade
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('New York', '04:00', '300 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('London', '02:30', '200 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Tokyo', '05:00', '400 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Paris', '02:15', '180 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Sydney', '06:00', '500 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Dubai', '01:30', '120 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Berlin', '03:00', '250 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Beijing', '08:00', '700 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Toronto', '04:30', '350 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Moscow', '03:50', '300 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Istanbul', '02:00', '180 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Cairo', '05:50', '450 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Bangkok', '03:15', '250 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Mumbai', '07:00', '600 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Los Angeles', '01:45', '150 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Rio de Janeiro', '09:00', '800 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Seoul', '02:30', '220 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Mexico City', '05:00', '400 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Rome', '02:30', '200 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Shanghai', '06:30', '550 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Cape Town', '04:00', '350 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Toronto', '02:15', '180 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Buenos Aires', '07:30', '650 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Berlin', '03:45', '300 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Madrid', '02:00', '180 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Singapore', '05:30', '450 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Amsterdam', '02:45', '220 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Vienna', '04:00', '300 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Prague', '01:30', '120 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Stockholm', '03:15', '250 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Athens', '06:00', '500 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Dublin', '02:30', '200 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Lisbon', '05:00', '400 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Vancouver', '03:00', '250 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('San Francisco', '01:45', '150 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Melbourne', '08:00', '700 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Osaka', '02:45', '220 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Dubai', '05:00', '400 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Munich', '02:00', '180 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Barcelona', '06:00', '500 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Beijing', '01:30', '200 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Hanoi', '04:00', '300 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Delhi', '01:30', '120 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Johannesburg', '03:15', '250 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Toronto', '06:0', '500 km');
+insert into localidade (loc_nome, loc_duracao, loc_distancia) value('Riyadh', '02:15', '180 km');
 
 
-
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('New York', '04:00', '300 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('London', '02:30', '200 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Tokyo', '05:00', '400 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Paris', '02:15', '180 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Sydney', '06:00', '500 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Dubai', '01:30', '120 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Berlin', '03:00', '250 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Beijing', '08:00', '700 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Toronto', '04:30', '350 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Moscow', '03:50', '300 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Istanbul', '02:00', '180 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Cairo', '05:50', '450 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Bangkok', '03:15', '250 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Mumbai', '07:00', '600 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Los Angeles', '01:45', '150 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Rio de Janeiro', '09:00', '800 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Seoul', '02:30', '220 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Mexico City', '05:00', '400 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Rome', '02:30', '200 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Shanghai', '06:30', '550 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Cape Town', '04:00', '350 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Toronto', '02:15', '180 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Buenos Aires', '07:30', '650 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Berlin', '03:45', '300 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Madrid', '02:00', '180 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Singapore', '05:30', '450 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Amsterdam', '02:45', '220 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Vienna', '04:00', '300 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Prague', '01:30', '120 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Stockholm', '03:15', '250 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Athens', '06:00', '500 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Dublin', '02:30', '200 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Lisbon', '05:00', '400 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Vancouver', '03:00', '250 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('San Francisco', '01:45', '150 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Melbourne', '08:00', '700 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Osaka', '02:45', '220 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Dubai', '05:00', '400 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Munich', '02:00', '180 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Barcelona', '06:00', '500 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Beijing', '01:30', '200 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Hanoi', '04:00', '300 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Delhi', '01:30', '120 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Johannesburg', '03:15', '250 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Toronto', '06:0', '500 km');
-INSERT INTO localidade (loc_nome, loc_duracao, loc_distancia) VALUES('Riyadh', '02:15', '180 km');
+-- Inserção de dados na tabela AviaoLoc
+insert into aviaoLoc(loc_id, aviao_id) value(1, 7);
+insert into aviaoLoc(loc_id, aviao_id) value(2, 32);
+insert into aviaoLoc(loc_id, aviao_id) value(3, 18);
+insert into aviaoLoc(loc_id, aviao_id) value(4, 5);
+insert into aviaoLoc(loc_id, aviao_id) value(5, 41);
+insert into aviaoLoc(loc_id, aviao_id) value(6, 23);
+insert into aviaoLoc(loc_id, aviao_id) value(7, 14);
+insert into aviaoLoc(loc_id, aviao_id) value(8, 9);
+insert into aviaoLoc(loc_id, aviao_id) value(9, 35);
+insert into aviaoLoc(loc_id, aviao_id) value(10, 2);
+insert into aviaoLoc(loc_id, aviao_id) value(11, 27);
+insert into aviaoLoc(loc_id, aviao_id) value(12, 10);
+insert into aviaoLoc(loc_id, aviao_id) value(13, 16);
+insert into aviaoLoc(loc_id, aviao_id) value(14, 29);
+insert into aviaoLoc(loc_id, aviao_id) value(15, 8);
+insert into aviaoLoc(loc_id, aviao_id) value(16, 19);
+insert into aviaoLoc(loc_id, aviao_id) value(17, 43);
+insert into aviaoLoc(loc_id, aviao_id) value(18, 26);
+insert into aviaoLoc(loc_id, aviao_id) value(19, 12);
+insert into aviaoLoc(loc_id, aviao_id) value(20, 37);
+insert into aviaoLoc(loc_id, aviao_id) value(21, 4);
+insert into aviaoLoc(loc_id, aviao_id) value(22, 21);
+insert into aviaoLoc(loc_id, aviao_id) value(23, 30);
+insert into aviaoLoc(loc_id, aviao_id) value(24, 1);
+insert into aviaoLoc(loc_id, aviao_id) value(25, 25);
+insert into aviaoLoc(loc_id, aviao_id) value(26, 38);
+insert into aviaoLoc(loc_id, aviao_id) value(27, 13);
+insert into aviaoLoc(loc_id, aviao_id) value(28, 22);
+insert into aviaoLoc(loc_id, aviao_id) value(29, 3);
+insert into aviaoLoc(loc_id, aviao_id) value(30, 44);
+insert into aviaoLoc(loc_id, aviao_id) value(31, 20);
+insert into aviaoLoc(loc_id, aviao_id) value(32, 11);
+insert into aviaoLoc(loc_id, aviao_id) value(33, 34);
+insert into aviaoLoc(loc_id, aviao_id) value(34, 6);
+insert into aviaoLoc(loc_id, aviao_id) value(35, 40);
+insert into aviaoLoc(loc_id, aviao_id) value(36, 15);
+insert into aviaoLoc(loc_id, aviao_id) value(37, 28);
+insert into aviaoLoc(loc_id, aviao_id) value(38, 45);
+insert into aviaoLoc(loc_id, aviao_id) value(39, 17);
+insert into aviaoLoc(loc_id, aviao_id) value(40, 31);
+insert into aviaoLoc(loc_id, aviao_id) value(41, 42);
+insert into aviaoLoc(loc_id, aviao_id) value(42, 24);
+insert into aviaoLoc(loc_id, aviao_id) value(43, 36);
+insert into aviaoLoc(loc_id, aviao_id) value(44, 33);
+insert into aviaoLoc(loc_id, aviao_id) value(45, 46);
+insert into aviaoLoc(loc_id, aviao_id) value(46, 39);
