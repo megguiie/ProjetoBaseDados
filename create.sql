@@ -7,7 +7,7 @@ create table avioes(aviao_id int not null auto_increment,
     aviao_assento int(500) not null,
     aviao_porte varchar(45) not null,
     aviao_mobilidade char(1) not null,
-    constraint pk_aviao_id primary key(aviao_id)
+    constraint pk_aviao_id primary key(aviao_id),
 );
 
 -- Criacação da tabela Localidades
@@ -26,7 +26,11 @@ create table bilhetes(bi_id int not null auto_increment,
     bi_horario varchar(7) not null,
     bi_gate varchar(4) not null,
     bi_data date,
-    constraint pk_bi_id primary key(bi_id)
+    bi_aviao_id int,
+    bi_loc_id int,
+    constraint pk_bi_id primary key(bi_id),
+    constraint fk_bi_aviao_id foreign key (bi_aviao_id) references bilhetes(bi_id),
+    constraint fk_bi_loc_id foreign key (bi_loc_id) references localidade(loc_id)
 );
 
 -- Criacação da tabela Clientes
@@ -40,7 +44,11 @@ create table clientes(cli_id int not null auto_increment,
     cli_necessidades char(1) not null,
     cli_morada varchar(100) not null,
     num_passaporte varchar(30) not null,
-    constraint pk_cli_id primary key(cli_id)
+    cli_bi_id int,
+    cli_ban_id int,
+    constraint pk_cli_id primary key(cli_id),
+    constraint fk_cli_bi_id foreign key (cli_bi_id) references bilhetes(bi_id),
+    constraint fk_cli_ban_id foreign key (cli_ban_id) references cartaoBancario(ban_id)
 );
 
 -- Criacação da tabela Funcionários
@@ -54,7 +62,9 @@ create table funcionarios(fun_id int not null auto_increment,
     fun_ss int(11) not null,
     fun_numSeguro varchar(25) not null,
     fun_cargo varchar(30) not null,
-    constraint pk_fun_id primary key(fun_id)
+    fun_ban_id int,
+    constraint pk_fun_id primary key(fun_id),
+    constraint fk_cli_ban_id foreign key (cli_ban_id) references cartaoBancario(ban_id)
 );
 
 -- Criacação da tabela Cartão Bancario
@@ -70,6 +80,10 @@ create table cartaoBancario(ban_id int not null auto_increment,
 
 
 -- Criação da tabela intermediaria entre os Aviões e Localidades 
---create table aviaoLoc(
---    constraint fk_
---)
+create table aviaoLoc(
+    aviao_id int,
+    loc_id int,
+    constraint pk_avio_loc_id primary key (aviao_id, loc_id),
+    constraint fk_aviao_id foreign key (aviao_id) references avioes(aviao_id),
+    constraint fk_loc_id foreign key (loc_id) references localidade(loc_id)
+);
