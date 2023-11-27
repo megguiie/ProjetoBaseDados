@@ -39,7 +39,7 @@ create table cartaoBancario(ban_id NUMBER GENERATED ALWAYS as IDENTITY(START wit
     ban_SWIFT varchar(10) not null,
     ban_IBAN varchar(25) not null,
     ban_num number(18) not null,
-    ban_data date not null,
+    ban_data varchar(7) not null,
     ban_CVC number(3) not null,
     ban_cli_id int,
     constraint pk_ban_id primary key(ban_id)
