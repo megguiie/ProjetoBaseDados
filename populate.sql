@@ -24,7 +24,7 @@ insert into avioes (aviao_nome, aviao_modelo, aviao_assento, aviao_porte, aviao_
 insert into avioes (aviao_nome, aviao_modelo, aviao_assento, aviao_porte, aviao_mobilidade) values('Dornier', 'Do X', '236', 'Medio', 's');
 
 
--- Inserção de dados na tabela Clientes
+-- Inserção de dados na tabela Clientes 
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte, observacoes) values('Viviane Mariam de Soares', 125814275, 'vivianesoares@hotmail.com', 926897752, TO_DATE('1992-02-15', 'YYYY-MM-DD'), 's', 'Rua Pescador Bacalhoeiro 75', 'HR619148', 'Cadeirante');
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte) values('Iris Carregueiro', 140053573, 'iriscarregueiro@hotmail.com', 948211469, TO_DATE('1996-06-03', 'YYYY-MM-DD'), 'n', 'Rua Cardeal Mercier 105', 'WA371814');
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte) values('Kiara Raíssa de Machado', 116373156, 'kiararaissa@hotmail.com', 993024502, TO_DATE('2004-10-28', 'YYYY-MM-DD'), 'n', 'Rua Pé Mouro Armz 94', 'JL298423');
