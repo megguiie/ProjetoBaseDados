@@ -1,7 +1,7 @@
--- Inserção de dados nas tabelas antes criadas
+-- ==== Inserção de dados nas tabelas antes criadas ====
 
 
--- Inserção de dados na tabela Avião
+-- Inserção de dados na tabela avioes
 insert into avioes (aviao_nome, aviao_modelo, aviao_assento, aviao_porte, aviao_mobilidade) values('Aero Spacelines', '337-SG/SGT', '499', 'Grande', 's');
 insert into avioes (aviao_nome, aviao_modelo, aviao_assento, aviao_porte, aviao_mobilidade) values('Airbus', 'A380', '43', 'Pequeno', 'n');
 insert into avioes (aviao_nome, aviao_modelo, aviao_assento, aviao_porte, aviao_mobilidade) values('Boeing', 'B-29', '444', 'Grande', 's');
@@ -24,7 +24,7 @@ insert into avioes (aviao_nome, aviao_modelo, aviao_assento, aviao_porte, aviao_
 insert into avioes (aviao_nome, aviao_modelo, aviao_assento, aviao_porte, aviao_mobilidade) values('Dornier', 'Do X', '236', 'Medio', 's');
 
 
--- Inserção de dados na tabela Clientes 
+-- Inserção de dados na tabela clientes 
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte, observacoes) values('Viviane Mariam de Soares', 125814275, 'vivianesoares@hotmail.com', 926897752, TO_DATE('1992-02-15', 'YYYY-MM-DD'), 's', 'Rua Pescador Bacalhoeiro 75', 'HR619148', 'Cadeirante');
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte) values('Iris Carregueiro', 140053573, 'iriscarregueiro@hotmail.com', 948211469, TO_DATE('1996-06-03', 'YYYY-MM-DD'), 'n', 'Rua Cardeal Mercier 105', 'WA371814');
 insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessidades, cli_morada, num_passaporte) values('Kiara Raíssa de Machado', 116373156, 'kiararaissa@hotmail.com', 993024502, TO_DATE('2004-10-28', 'YYYY-MM-DD'), 'n', 'Rua Pé Mouro Armz 94', 'JL298423');
@@ -78,7 +78,7 @@ insert into clientes (cli_nome, cli_NIF, email, telefone, cli_dnsc, cli_necessid
 
 
 
--- Inserção de dados na tabela Cartão Bancario
+-- Inserção de dados na tabela cartaoBancario
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC) values('Banco Espirito Santo', 'BESCPTPL', 'PT50000730455970830257902', 4315818529462373, '9/2027', 165); 
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC, ban_cli_id) values('Banco Santander Totta', 'TOTAPTPL', 'PT50000749417808839317368', 4508897539283117, '6/2029', 377, 19); 
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC, ban_cli_id) values('Banco BPI', 'BBPIPTPL', 'PT50000779400308179071649', 4864550667293907, '5/2027', 456, 3); 
@@ -161,7 +161,7 @@ insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ba
 insert into cartaoBancario (ban_nome, ban_SWIFT, ban_IBAN, ban_num, ban_data, ban_CVC, ban_cli_id) values('Banco Promissor', 'BPROMIPT', 'PT50004156789012345678987', 5421675489013425, '3/2025', 689, 16);
 
 
--- Inserção de dados na tabela Funcionario
+-- Inserção de dados na tabela funcionarios
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, fun_ban_id) values('Lara Camelo Cavalheiro', 'Piloto', 'Rua Doutor Alberto Sampaio 23', 192037447, 73301901520, 'AP20066736153902.05', TO_DATE('1981-07-02', 'YYYY-MM-DD'), 916281041, 9500.00, 38);
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, fun_ban_id) values('Márcio Romeu Gonçalves', 'Carregador', 'Rua Velhas 30', 137666985, 11558338761, 'AP20039164820543.05', TO_DATE('1958-03-11', 'YYYY-MM-DD'), 962816557, 6123.00, 4);
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, fun_ban_id) values('Soraia Aissatou de Bugalho', 'Segurança', 'Rua Forno 60', 278632122, 11815106672, 'AP20108524301745.05', TO_DATE('1943-12-24', 'YYYY-MM-DD'), 916319005, 6133.00, 21);
@@ -194,7 +194,7 @@ insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_
 insert into funcionarios (fun_nome, fun_cargo, fun_morada, fun_nif, fun_ss, fun_numSeguro, fun_dnsc, fun_contacto, fun_salario, fun_ban_id) values('Antonella Estrela de Moreira', 'Recepcionista', 'Rua Figueiras 2', 244850143, 29503254224, 'AP20164839164925.05', TO_DATE('1941-11-05','YYYY-MM-DD') 916383954, 2194.90, 59);
 
 
--- Inserção de dados na tabela Localidade
+-- Inserção de dados na tabela localidade
 insert into localidade (loc_nome, loc_duracao, loc_distancia) values('New York', '04:00', '300 km');
 insert into localidade (loc_nome, loc_duracao, loc_distancia) values('London', '02:30', '200 km');
 insert into localidade (loc_nome, loc_duracao, loc_distancia) values('Tokyo', '05:00', '400 km');
@@ -243,8 +243,8 @@ insert into localidade (loc_nome, loc_duracao, loc_distancia) values('Toronto', 
 insert into localidade (loc_nome, loc_duracao, loc_distancia) values('Riyadh', '02:15', '180 km');
 
 
--- Inserção de dados na tabela Bilhetes
-insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, bi_cli_id, bi_ban_id, bi_loc_id) values(1683.89, 'B2', 'LGG4552AZ', '20:48', 'W12', TO_DATE('2024-01-21', 'YYYY-MM-DD'), 1, 22, 1);
+-- Inserção de dados na tabela bilhetes
+insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, bi_cli_id, bi_ban_id, bi_loc_id) values(1683.89, 'B2', 'LGG4552AZ', '08:30', 'W12', TO_DATE('2024-09-11', 'YYYY-MM-DD'), 1, 22, 1);
 insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, bi_cli_id, bi_ban_id, bi_loc_id) values(316.27, 'F6', 'ECZ9279SU', '00:50', 'Y0', TO_DATE('2024-02-27', 'YYYY-MM-DD'), 2, 76, 2);
 insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, bi_cli_id, bi_ban_id, bi_loc_id) values(3329.84, 'F6', 'SSH2097YH', '21:36', 'MQ83', TO_DATE('2024-04-04', 'YYYY-MM-DD'), 3, 3, 3);
 insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_data, bi_cli_id, bi_ban_id, bi_loc_id) values(829.64, 'J9', 'KPQ7572PN', '12:51', 'O26', TO_DATE('2024-04-06', 'YYYY-MM-DD'), 4, 63, 4);
@@ -297,7 +297,7 @@ insert into bilhetes (bi_preco, bi_assento, bi_numVoo, bi_horario, bi_gate, bi_d
 
 
 
--- Inserção de dados na tabela AviaoLoc
+-- Inserção de dados na tabela aviaoLoc
 insert into aviaoLoc(loc_id, aviao_id) values(1, 5);
 insert into aviaoLoc(loc_id, aviao_id) values(2, 18);
 insert into aviaoLoc(loc_id, aviao_id) values(3, 7);

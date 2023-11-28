@@ -1,7 +1,6 @@
--- Criação das tabelas com os respectivos atributos consoante o modelo relacional feito
+-- ==== Criação das tabelas com os respectivos atributos consoante o modelo relacional feito ====
 
-
--- Criacação da tabela Aviões
+-- Criacação da tabela avioes
 create table avioes(aviao_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1) not null,
     aviao_nome varchar(45) not null,
     aviao_modelo varchar(45) not null,
@@ -11,7 +10,7 @@ create table avioes(aviao_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 IN
     constraint pk_aviao_id primary key(aviao_id)
 );
 
--- Criacação da tabela Localidades
+-- Criacação da tabela localidade
 create table localidade(loc_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1) not null,
     loc_nome varchar(20) not null,
     loc_duracao varchar(5) not null,
@@ -19,7 +18,7 @@ create table localidade(loc_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 
     constraint pk_loc_id primary key(loc_id)
 );
 
--- Criacação da tabela Bilhetes
+-- Criacação da tabela bilhetes
 create table bilhetes(bi_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1) not null,
     bi_preco float(10) not null,
     bi_assento varchar(3) not null,
@@ -33,7 +32,7 @@ create table bilhetes(bi_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INC
     constraint pk_bi_id primary key(bi_id)
 );
 
--- Criacação da tabela Cartão Bancario
+-- Criacação da tabela cartaoBancario
 create table cartaoBancario(ban_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1) not null,
     ban_nome varchar(30) not null,
     ban_SWIFT varchar(10) not null,
@@ -59,7 +58,7 @@ create table clientes(cli_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 IN
     constraint pk_cli_id primary key(cli_id)
 );
 
--- Criacação da tabela Funcionários
+-- Criacação da tabela funcionarios
 create table funcionarios(fun_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1) not null,
     fun_nome varchar(45) not null,
     fun_cargo varchar(30) not null,
@@ -74,7 +73,7 @@ create table funcionarios(fun_id NUMBER GENERATED ALWAYS as IDENTITY(START with 
     constraint pk_fun_id primary key(fun_id)
 );
 
--- Criação da tabela intermediaria entre os Aviões e Localidades 
+-- Criação da tabela intermediaria entre os avioes e localidade 
 create table aviaoLoc(aviaoloc_id NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1) not null,
     aviao_id int,
     loc_id int,
@@ -84,7 +83,7 @@ create table aviaoLoc(aviaoloc_id NUMBER GENERATED ALWAYS as IDENTITY(START with
 );
 
 
--- Criação das chaves estrangeiras
+-- Implementação das chaves estrangeiras
 alter table bilhetes add constraint fk_bilhetes_localidade 
             foreign key (bi_loc_id) references localidade(loc_id);
 
@@ -99,3 +98,10 @@ alter table cartaoBancario add constraint fk_cartaoBancario_clientes
 
 alter table funcionarios add constraint fk_funcionarios_cartaoBancario
             foreign key (fun_ban_id) references cartaoBancario(ban_id);
+
+
+--===== Criação de views ====
+
+-- Criação da view para visualizar o nome dos clientes e a data de nascimento
+create view vNome as
+select cli_nome "Nome do CLiente", cli_dnsc "Data de nascimento" from clientes;
